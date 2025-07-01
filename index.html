@@ -2,46 +2,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Luis Fernando Ayala Aguirre</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis Fernando Ayala</title>
   <style>
     body {
-      font-family: Georgia, serif;
-      background-color: #f4f4f4;
-      color: #1a1a1a;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
     }
     header {
-      background-color: #003366;
+      background: url('portada.jpg.JPEG') center top/cover no-repeat;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: white;
-      padding: 40px 20px;
       text-align: center;
+      text-shadow: 1px 1px 4px #000;
     }
     header h1 {
       font-size: 36px;
-      margin: 0;
+      margin: 10px 0 0;
     }
     header p {
       font-size: 18px;
-      font-style: italic;
-      margin-top: 10px;
+    }
+    nav {
+      background-color: #003366;
+      color: white;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
     }
     section {
-      max-width: 900px;
+      padding: 40px;
+      max-width: 800px;
       margin: auto;
-      padding: 40px 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-      color: #003366;
-    }
-    p {
-      font-size: 17px;
-      line-height: 1.6;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 10px;
     }
     footer {
       background-color: #003366;
@@ -49,34 +59,72 @@
       text-align: center;
       padding: 20px;
       font-size: 14px;
+      margin-top: 40px;
+    }
+    .btn {
+      margin-top: 20px;
+      background-color: #0052cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* Diseño responsive para móviles */
+    @media screen and (max-width: 768px) {
+      header {
+        height: 300px;
+        background-position: center center;
+      }
+      header h1 {
+        font-size: 24px;
+      }
+      header p {
+        font-size: 16px;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        margin: 10px 0;
+      }
+      section {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <header style="
-  background: url('portada.jpg.JPEG') no-repeat center top;
-  background-size: contain;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-">
-  <h1 style="color: white; text-shadow: 1px 1px 4px #000;">Luis Fernando Ayala</h1>
-  <p style="color: white; text-shadow: 1px 1px 4px #000;">Director Provincial por Guayas - Movimiento CREO</p>
-</header>
+  <header>
+    <h1>Luis Fernando Ayala</h1>
+    <p>Director Provincial por Guayas - Movimiento CREO</p>
+    <button class="btn" onclick="document.getElementById('proyectos').scrollIntoView({behavior: 'smooth'});">Conoce mis proyectos</button>
+  </header>
 
+  <nav>
+    <a href="#perfil">Perfil</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-
-
-  <section>
+  <section id="perfil">
     <h2>Perfil Profesional</h2>
     <p>Economista de formación, Luis Fernando Ayala Aguirre ha desempeñado importantes funciones dentro del sector público. Fue delegado de la Ministra de Gobierno ante el Consejo Directivo del ISSPOL, destacándose por su gestión técnica en temas relacionados con la seguridad social de la Policía Nacional. Su experiencia como asesor en organismos públicos le ha permitido fortalecer su compromiso con la ética, la institucionalidad y la administración eficiente de los recursos del Estado.</p>
   </section>
 
-  <section>
+  <section id="proyectos">
     <h2>Perfil Político</h2>
     <p>Actualmente se desempeña como Director Provincial del Movimiento CREO (Lista 21) en Guayas. Desde este rol, impulsa el fortalecimiento territorial del movimiento, liderando procesos de formación, diálogo ciudadano y representación política. Luis Fernando ha sido vocero en medios de comunicación y foros públicos, defendiendo los principios de transparencia, responsabilidad y trabajo por un Ecuador con oportunidades para todos.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📧 contacto@luisfernandoayala.com</p>
+    <p>📍 Guayas, Ecuador</p>
+    <p>🌐 Redes sociales próximamente</p>
   </section>
 
   <footer>
@@ -84,4 +132,3 @@
   </footer>
 </body>
 </html>
-
